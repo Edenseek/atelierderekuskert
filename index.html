@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derek Uskert Architecture</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Derek Uskert Architecture</div>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Residential Architecture · New York</p>
+      <h1>Thoughtful residential architecture for homes, renovations, and additions.</h1>
+      <p class="hero-text">A focused architecture practice helping homeowners shape intelligent, beautiful, livable spaces.</p>
+      <a class="button" href="mailto:derek@vrneighborhood.com?subject=Architecture%20Project%20Inquiry">Start a Project</a>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected Work</h2>
+      </div>
+      <div class="grid projects">
+        <article>
+          <div class="placeholder">Project Image</div>
+          <h3>Residential Renovation</h3>
+          <p>Interior transformation focused on light, circulation, and refined everyday living.</p>
+        </article>
+        <article>
+          <div class="placeholder">Project Image</div>
+          <h3>Townhouse Addition</h3>
+          <p>A sensitive expansion balancing historic character with contemporary family needs.</p>
+        </article>
+        <article>
+          <div class="placeholder">Project Image</div>
+          <h3>Modern Home Concept</h3>
+          <p>Early-stage planning and design strategy for a custom residential project.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>How I Can Help</h2>
+      </div>
+      <div class="grid services">
+        <div><h3>Renovations</h3><p>Design guidance for apartments, townhouses, and single-family homes.</p></div>
+        <div><h3>Additions</h3><p>Concept design, feasibility, planning, and coordination through the design process.</p></div>
+        <div><h3>Consulting</h3><p>Early project assessment, layout review, scope strategy, and design direction.</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Derek Uskert</h2>
+      </div>
+      <p>I am a residential architect focused on creating homes that feel calm, intelligent, and deeply considered. My work blends practical problem-solving with a strong sense of proportion, material, and atmosphere.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Have a residential project in mind?</h2>
+      <p>Send a brief note with your project location, scope, and timeline.</p>
+      <a class="button" href="mailto:derek@vrneighborhood.com?subject=Architecture%20Project%20Inquiry">Email Derek</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Derek Uskert Architecture. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
