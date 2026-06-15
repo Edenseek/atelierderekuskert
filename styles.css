@@ -25,8 +25,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 6vw;
-  border-bottom: 1px solid var(--line);
+  padding: 20px 6vw;
+  border-bottom: 1px solid rgba(222,216,207,.7);
   background: rgba(247,244,239,.92);
   position: sticky;
   top: 0;
@@ -190,14 +190,25 @@ footer {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
-  color: inherit;
-  font-size: 1.25rem;
+  color: var(--text);
+  font-size: clamp(19px, 2.2vw, 23px);
+  letter-spacing: .07em;
+  line-height: 1;
+  text-transform: none;
 }
+.brand,
+.brand:hover,
+.brand:focus,
+.brand span { text-decoration: none; }
+.brand span { white-space: nowrap; text-transform: none; }
+.brand:hover { opacity: .78; transition: opacity .2s ease; }
 
 .brand-logo {
-  width: 42px;
-  height: 42px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
+  flex: none;
+  opacity: .85;
 }
