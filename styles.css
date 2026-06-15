@@ -1,7 +1,7 @@
 :root {
   --bg: #f7f4ef;
   --text: #1f1f1f;
-  --muted: #6f6a63;
+  --muted: #645d54;
   --line: #ded8cf;
   --panel: #ffffff;
   --accent: #3d342b;
@@ -33,7 +33,6 @@ body {
   backdrop-filter: blur(10px);
 }
 nav a {
-  color: var(--text);
   text-decoration: none;
   margin-left: 28px;
   font-family: var(--sans);
@@ -43,6 +42,36 @@ nav a {
   transition: color .2s ease;
 }
 nav a:hover { color: var(--text); }
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -8px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform .25s ease, background-color .25s ease;
+}
+.nav-toggle-icon { position: relative; }
+.nav-toggle-icon::before { position: absolute; left: 0; top: -7px; }
+.nav-toggle-icon::after { position: absolute; left: 0; top: 7px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon { background: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::after { transform: translateY(-7px) rotate(-45deg); }
 
 .hero {
   position: relative;
@@ -186,9 +215,21 @@ footer {
 
 /* Large phones / small tablets — single column, stacked header */
 @media (max-width: 640px) {
-  .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
-  nav { display: flex; flex-wrap: wrap; gap: 4px 24px; }
-  nav a { margin: 0; padding: 8px 0; font-size: 15px; }
+  .site-header { flex-wrap: wrap; align-items: center; }
+  .nav-toggle { display: inline-flex; }
+  nav {
+    flex-basis: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 14px;
+  }
+  nav.is-open { display: flex; }
+  nav a {
+    margin: 0;
+    padding: 14px 0;
+    font-size: 16px;
+    border-top: 1px solid var(--line);
+  }
   .grid, .about { grid-template-columns: 1fr; }
   .hero { min-height: 76vh; padding: 64px 6vw; }
   .section { padding: 64px 6vw; }
