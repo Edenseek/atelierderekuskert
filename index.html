@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derek Uskert Architecture</title>
+  <title>Atelier Derek Uskert</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/Logo_ADU_ICO.ico">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">Derek Uskert Architecture</div>
+    <a href="#" class="brand">
+      <img src="assets/images/Logo.png" alt="Atelier Derek Uskert logo" class="brand-logo">
+      <span>Atelier Derek Uskert</span>
+    </a>
     <nav>
       <a href="#portfolio">Portfolio</a>
       <a href="#services">Services</a>
@@ -19,10 +23,13 @@
 
   <main>
     <section class="hero">
-      <p class="eyebrow">Residential Architecture · New York</p>
-      <h1>Thoughtful residential architecture for homes, renovations, and additions.</h1>
-      <p class="hero-text">A focused architecture practice helping homeowners shape intelligent, beautiful, livable spaces.</p>
-      <a class="button" href="mailto:derek@vrneighborhood.com?subject=Architecture%20Project%20Inquiry">Start a Project</a>
+      <img class="hero-image" src="assets/images/339.jpg" alt="Modern hillside residence at dusk with warm interior light and glass railings" fetchpriority="high" width="1800" height="1268">
+      <div class="hero-content">
+        <p class="eyebrow">Residential Architecture · California</p>
+        <h1>Thoughtful residential architecture for homes, renovations, and additions.</h1>
+        <p class="hero-text">A focused architecture practice helping homeowners shape intelligent, beautiful, livable spaces.</p>
+        <a class="button" href="mailto:info@atelierderekuskert.com?subject=Architecture%20Project%20Inquiry">Start a Project</a>
+      </div>
     </section>
 
     <section id="portfolio" class="section">
@@ -32,19 +39,19 @@
       </div>
       <div class="grid projects">
         <article>
-          <div class="placeholder">Project Image</div>
-          <h3>Residential Renovation</h3>
-          <p>Interior transformation focused on light, circulation, and refined everyday living.</p>
+          <img src="assets/images/Constant_Entertainment_1.jpg" alt="Modern living room with linear fireplace, vaulted ceiling, and forest views" loading="lazy" width="900" height="600">
+          <h3>Living Pavilion</h3>
+          <p>A calm, light-filled living space anchored by a linear fireplace and framed by the surrounding landscape.</p>
         </article>
         <article>
-          <div class="placeholder">Project Image</div>
-          <h3>Townhouse Addition</h3>
-          <p>A sensitive expansion balancing historic character with contemporary family needs.</p>
+          <img src="assets/images/29068.2.jpg" alt="Serene bedroom with three framed windows looking onto trees" loading="lazy" width="900" height="600">
+          <h3>Hillside Bedroom</h3>
+          <p>A quiet, considered retreat where proportion and framed views shape a restful everyday atmosphere.</p>
         </article>
         <article>
-          <div class="placeholder">Project Image</div>
-          <h3>Modern Home Concept</h3>
-          <p>Early-stage planning and design strategy for a custom residential project.</p>
+          <img src="assets/images/DSC_0552.jpg" alt="Bright skylit living room with built-in shelving and French doors" loading="lazy" width="900" height="600">
+          <h3>Light-Filled Renovation</h3>
+          <p>An interior transformation focused on natural light, circulation, and refined everyday living.</p>
         </article>
       </div>
     </section>
@@ -62,27 +69,24 @@
     </section>
 
     <section id="about" class="section about">
-      <div>
+      <div class="about-intro">
         <p class="eyebrow">About</p>
         <h2>Derek Uskert</h2>
+        <p>I am a residential architect focused on creating homes that feel calm, intelligent, and deeply considered. My work blends practical problem-solving with a strong sense of proportion, material, and atmosphere.</p>
       </div>
-      <p>I am a residential architect focused on creating homes that feel calm, intelligent, and deeply considered. My work blends practical problem-solving with a strong sense of proportion, material, and atmosphere.</p>
+      <img class="about-portrait" src="assets/images/Portrait.jpg" alt="Portrait of architect Derek Uskert" loading="lazy" width="600" height="600">
     </section>
 
     <section id="contact" class="section contact">
       <p class="eyebrow">Contact</p>
       <h2>Have a residential project in mind?</h2>
-      <p>Send a brief note with your project location, scope, and timeline.</p>
-      <a class="button" href="mailto:derek@vrneighborhood.com?subject=Architecture%20Project%20Inquiry">Email Derek</a>
+      <p>Send a brief note with your project location, goals, and timeline. We'll respond to discuss next steps.</p>
+      <a class="button" href="mailto:info@atelierderekuskert.com?subject=Architecture%20Project%20Inquiry">Contact Atelier</a>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Derek Uskert Architecture. All rights reserved.</p>
+    <p>© 2026 Atelier Derek Uskert. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
