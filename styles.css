@@ -179,12 +179,28 @@ footer {
   letter-spacing: .03em;
 }
 
-@media (max-width: 800px) {
-  .site-header { align-items: flex-start; gap: 18px; flex-direction: column; }
-  nav a { margin: 0 16px 0 0; }
+/* Tablet — two-column grids; header stays inline */
+@media (max-width: 960px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* Large phones / small tablets — single column, stacked header */
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  nav { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+  nav a { margin: 0; padding: 8px 0; font-size: 15px; }
   .grid, .about { grid-template-columns: 1fr; }
-  .hero { min-height: 70vh; }
-  .about-portrait { max-height: 380px; }
+  .hero { min-height: 76vh; padding: 64px 6vw; }
+  .section { padding: 64px 6vw; }
+  .section-heading { margin-bottom: 32px; }
+  .hero-text, .about-intro p, .contact p { font-size: 18px; }
+  .projects article img { height: 260px; }
+  .about-portrait { max-height: 420px; }
+}
+
+/* Small phones — ease the headline */
+@media (max-width: 400px) {
+  h1 { font-size: 38px; }
 }
 
 .brand {
